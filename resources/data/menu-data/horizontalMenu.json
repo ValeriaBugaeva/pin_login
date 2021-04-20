@@ -1,0 +1,157 @@
+{
+  "menu": [
+    {
+      "url": "dashboard",
+      "name": "Dashboards",
+      "icon": "home",
+      "slug": ""
+    },
+    {
+      "url": "chat",
+      "name": "Chat",
+      "badge": "2",
+      "badgeClass": "badge badge-light-warning badge-pill ml-auto mr-1",
+      "icon": "message-square",
+      "slug": "chat"
+    },
+    {
+      "navheader": "UI Elements",
+      "slug": ""
+    },
+    {
+      "name": "staff",
+      "url": "staff",
+      "icon": "user",
+      "slug": "staff"
+    },
+    {
+      "name": "Schedule",
+      "url": "schedule",
+      "icon": "clock",
+      "slug": "schedule"
+    },
+    {
+      "name": "Location",
+      "url": "location",
+      "icon": "compass",
+      "slug": "location"
+    },
+    {
+      "url": "calendar",
+      "name": "Calendar",
+      "icon": "calendar",
+      "slug": "calendar"
+    },
+    {
+      "url": "todo",
+      "name": "Todo",
+      "icon": "check-square",
+      "slug": "todo"
+    },
+    {
+      "url": "document",
+      "name": "Document",
+      "icon": "save",
+      "slug": "document"
+    },
+    {
+      "name": "Invoice",
+      "icon": "file-text",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "invoice/list",
+          "name": "List",
+          "icon": "circle",
+          "slug": "invoice-list"
+        },
+        {
+          "url": "invoice/preview",
+          "name": "Preview",
+          "icon": "circle",
+          "slug": "invoice-preview"
+        },
+        {
+          "url": "invoice/edit",
+          "name": "Edit",
+          "icon": "circle",
+          "slug": "invoice-edit"
+        },
+        {
+          "url": "invoice/add",
+          "name": "Add",
+          "icon": "circle",
+          "slug": "invoice-add"
+        }
+      ]
+    },
+    {
+      "name": "Roles & Permission",
+      "url": "role",
+      "icon": "lock",
+      "slug": "roles-permission"
+    },
+    {
+      "name": "Activity Log",
+      "url": "activity-log",      
+      "icon": "activity",
+      "slug": "activity-log"
+    },
+    {
+      "name": "eCommerce",
+      "icon": "shopping-cart",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "ecommerce/shop",
+          "name": "Shop",
+          "icon": "circle",
+          "slug": "ecommerce-shop"
+        },
+        {
+          "url": "ecommerce/details",
+          "name": "Details",
+          "icon": "circle",
+          "slug": "ecommerce-details"
+        },
+        {
+          "url": "ecommerce/wishlist",
+          "name": "Wish List",
+          "icon": "circle",
+          "slug": "ecommerce-wishlist"
+        },
+        {
+          "url": "ecommerce/checkout",
+          "name": "Checkout",
+          "icon": "circle",
+          "slug": "ecommerce-checkout"
+        }
+      ]
+    },
+    {
+      "url": "profile",
+      "name": "Profile",
+      "icon": "settings",
+      "slug": "profile"
+    },
+    {
+      "name": "Raise Support",
+      "icon": "life-buoy",
+      "slug": "raise-support",
+      "submenu": [
+        {
+          "url": "faq",
+          "name": "FAQ",
+          "icon": "circle",
+          "slug": "page-faq"
+        },
+        {
+          "url": "knowledge-base",
+          "name": "Knowledge Base",
+          "icon": "circle",
+          "slug": "page-knowledge-base"
+        }
+      ]
+    }
+  ]
+}

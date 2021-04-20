@@ -1,0 +1,64 @@
+{
+  "menu": [
+    {
+      "url": "dashboard",
+      "name": "Dashboards",
+      "icon": "home",
+      "slug": ""
+    },
+    {
+      "navheader": "UI Elements",
+      "slug": ""
+    },
+    {
+      "url": "chat",
+      "name": "Chat",
+      "badge": "2",
+      "badgeClass": "badge badge-light-warning badge-pill ml-auto mr-1",
+      "icon": "message-square",
+      "slug": "app-chat"
+    },
+    {
+      "url": "task",
+      "name": "Todo",
+      "icon": "check-square",
+      "slug": "app-todo"
+    },
+    {
+      "url": "calendar",
+      "name": "Calendar",
+      "icon": "calendar",
+      "slug": "app-calendar"
+    },
+    {
+      "url": "kanban",
+      "name": "Kanban",
+      "icon": "grid",
+      "slug": "app-kanban"
+    },
+    {
+      "url": "document",
+      "name": "Document",
+      "icon": "save",
+      "slug": "document"
+    },
+    {
+      "url": "faq",
+      "name": "FAQ",
+      "icon": "circle",
+      "slug": "page-faq"
+    },
+    {
+      "url": "profile",
+      "name": "Profile",
+      "icon": "settings",
+      "slug": "profile"
+    },
+    {
+      "name": "Disabled Menu",
+      "icon": "eye-off",
+      "classlist": "disabled",
+      "slug": "menu-disabled"
+    }
+  ]
+}

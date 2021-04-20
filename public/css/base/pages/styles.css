@@ -1,0 +1,231 @@
+.btn {
+    outline: 0;
+    height: 2.875rem;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    min-width: 7.5625rem;
+}
+.btn-primary {
+    background-color: #7f56ac;
+    border-color: #7f56ac;
+}
+.btn-primary:disabled {
+    background-color: #9471b9;
+}
+.btn-primary:hover:not([disabled]) {
+    background-color: #6b4892;
+}
+.btn-primary-light {
+    background-color: #a677d9;
+    border-color: #a677d9;
+}
+.btn-primary-light:disabled {
+    background-color: #bb97e2;
+}
+.btn-primary-light:hover:not([disabled]) {
+    background-color: #9157d0;
+}
+.btn-primary-lighter {
+    background-color: #e2c7ff;
+    border-color: #e2c7ff;
+}
+.btn-primary-lighter:disabled {
+    background-color: #f7f0ff;
+}
+.btn-primary-lighter:hover:not([disabled]) {
+    background-color: #cd9eff;
+}
+.btn-primary-lightest {
+    background-color: #f5f6fd;
+    border-color: #f5f6fd;
+}
+.btn-primary-lightest:disabled {
+    background-color: #fff;
+}
+.btn-primary-lightest:hover:not([disabled]) {
+    background-color: #d3d7f6;
+}
+.btn-dark-gray {
+    background-color: #372e42;
+    border-color: #372e42;
+}
+.btn-dark-gray:disabled {
+    background-color: #4b3f5a;
+}
+.btn-dark-gray:hover:not([disabled]) {
+    background-color: #231d2a;
+}
+.btn-gray {
+    background-color: #878da9;
+    border-color: #878da9;
+}
+.btn-gray:disabled {
+    background-color: #9fa4ba;
+}
+.btn-gray:hover:not([disabled]) {
+    background-color: #6f7698;
+}
+.btn-light-gray {
+    background-color: #e2e5f7;
+    border-color: #e2e5f7;
+}
+.btn-light-gray:disabled {
+    background-color: #fff;
+}
+.btn-light-gray:hover:not([disabled]) {
+    background-color: #c2c8ee;
+}
+.btn-warning {
+    background-color: #ffb74d;
+    border-color: #ffb74d;
+}
+.btn-warning:disabled {
+    background-color: #ffc876;
+}
+.btn-warning:hover:not([disabled]) {
+    background-color: #ffa624;
+}
+.btn-success {
+    background-color: #81c784;
+    border-color: #81c784;
+}
+.btn-success:disabled {
+    background-color: #9dd4a0;
+}
+.btn-success:hover:not([disabled]) {
+    background-color: #65ba68;
+}
+.btn-danger {
+    background-color: #e57373;
+    border-color: #e57373;
+}
+.btn-danger:disabled {
+    background-color: #eb9595;
+}
+.btn-danger:hover:not([disabled]) {
+    background-color: #df5151;
+}
+.btn-white {
+    background-color: #fff;
+    color: #878da9;
+    border: 1px solid #e2e5f7;
+}
+.btn-white:disabled {
+    background-color: #fff;
+}
+.btn-white:hover:not([disabled]) {
+    background-color: #ebebeb;
+}
+.btn-link {
+    text-decoration: none;
+    background-color: transparent;
+    color: #e2c7ff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1px 0.4375rem 2px;
+}
+.btn-link-primary {
+    text-decoration: none;
+    background-color: transparent;
+    color: #7f56ac;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1px 0.4375rem 2px;
+}
+.btn-link-italic {
+    font-style: italic;
+    font-size: 0.9375rem;
+    text-align: center;
+    font-weight: 400;
+    color: #e2c7ff;
+}
+.btn-logout {
+    height: auto;
+    color: #a677d9;
+    font-weight: 400;
+    font-size: 0.75rem;
+    transition: color 0.3s ease;
+    background-color: transparent;
+    padding: 0.5rem;
+}
+.btn-logout:hover {
+    color: #7f56ac;
+}
+input {
+    border-radius: 8px;
+    height: 3.75rem;
+    resize: none;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+input:focus {
+    outline: 0;
+    border-color: #e2e5f7;
+}
+.formControlFluid,
+.w-100 {
+    width: 100%;
+}
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.align-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+* {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+body h1 {
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: -0.72px;
+    text-align: center;
+}
+body h2 {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: -0.45px;
+    color: #372e42;
+    text-align: center;
+}
+body .error {
+    color: #fff;
+    font-size: 0.8125rem;
+}
+body .error-invert {
+    color: #d0021b;
+    font-size: 0.8125rem;
+}

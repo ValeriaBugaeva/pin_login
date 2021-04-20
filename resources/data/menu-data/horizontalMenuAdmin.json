@@ -1,0 +1,121 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboards",
+      "icon": "home",
+      "slug": ""
+    },
+    {
+      "url": "chat",
+      "name": "Chat",
+      "badge": "2",
+      "badgeClass": "badge badge-light-warning badge-pill ml-auto mr-1",
+      "icon": "message-square",
+      "slug": "chat"
+    },
+    {
+      "navheader": "UI Elements",
+      "slug": ""
+    },
+    {
+      "name": "Invoice",
+      "icon": "file-text",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "invoice/list",
+          "name": "List",
+          "icon": "circle",
+          "slug": "invoice-list"
+        },
+        {
+          "url": "invoice/preview",
+          "name": "Preview",
+          "icon": "circle",
+          "slug": "invoice-preview"
+        },
+        {
+          "url": "invoice/edit",
+          "name": "Edit",
+          "icon": "circle",
+          "slug": "invoice-edit"
+        },
+        {
+          "url": "invoice/add",
+          "name": "Add",
+          "icon": "circle",
+          "slug": "invoice-add"
+        }
+      ]
+    },
+    {
+      "name": "Apps",
+      "url": "user",      
+      "icon": "user",
+      "slug": "user"
+    },
+    {
+      "name": "Activity Log",
+      "url": "activity-log",      
+      "icon": "activity",
+      "slug": "activity-log"
+    },
+    {
+      "name": "Payment",
+      "icon": "shopping-cart",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "subscription/plan",
+          "name": "Subscription Plans",
+          "icon": "circle",
+          "slug": "subscription-plans"
+        },
+        {
+          "url": "subscription-income",
+          "name": "Manage Income",
+          "icon": "circle",
+          "slug": "subscription-income"
+        },
+        {
+          "url": "subscribed-users",
+          "name": "Subscribed Users",
+          "icon": "circle",
+          "slug": "subscribed-users"
+        },
+        {
+          "url": "checkout-sample",
+          "name": "Checkout Sample",
+          "icon": "circle",
+          "slug": "checkout-sample"
+        }
+      ]
+    },
+    {
+      "name": "Raise Support",
+      "icon": "life-buoy",
+      "slug": "raise-support",
+      "submenu": [
+        {
+          "url": "faq",
+          "name": "FAQ",
+          "icon": "circle",
+          "slug": "page-faq"
+        },
+        {
+          "url": "knowledge-base",
+          "name": "Knowledge Base",
+          "icon": "circle",
+          "slug": "page-knowledge-base"
+        }
+      ]
+    },
+    {
+      "url": "settings",
+      "name": "Account Settings",
+      "icon": "settings",
+      "slug": "settings"
+    }
+  ]
+}
