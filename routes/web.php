@@ -20,19 +20,13 @@ use App\Http\Controllers\Sample5Controller;
 
 //new routes added by developer Ibrahim
 
-Route::get('/screen1', function () {
-    return view('new.screen1');
-});
+Route::get('/screen1', '\App\Http\Controllers\Dashboard\DashboardController@screen1');
 
-Route::get('/screen3', function () {
-    return view('new.screen3');
-});
+Route::post('/screen3', '\App\Http\Controllers\Dashboard\DashboardController@screen3');
 
-Route::get('/screen4', function () {
-    return view('new.screen4');
-});
+Route::get('/screen4', '\App\Http\Controllers\Dashboard\DashboardController@screen4');
 
-Route::post('step1_arrival', '\App\Http\Controllers\CustomController@step2');
+Route::post('/step1_arrival', '\App\Http\Controllers\Dashboard\DashboardController@step2');
 
 //end of new routes
 

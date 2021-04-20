@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Staff;
+use App\Attendance;
 use App\Role;
 use App\Permission;
 use App\Charts\Charts;
@@ -134,9 +135,33 @@ class DashboardController extends Controller
             return "error";
         }
     }
+    public function screen1(Request $request)
+    {
+        return view("new.screen1");
+    }
+    public function screen3(Request $request)
+    {
+        $attendance = new Attendance;
+        $attendance->user_id = auth()->user()->user_id;
+        $attendance->arrival_date = $request->date;
+        $attendance->arrival_hour = $request->time;
+        $attendance->save();
+
+        return view("new.screen3");
+    }
+    public function screen4(Request $request)
+    {
+        return view("new.screen4");
+    }
+
     public function showDashboard()
     {
         return view('dashboard.default');
+    }
+    public function step2(Request $request)
+    {
+        $arrival = array('date' => $request->arrival_date, 'time' => $request->arrival_time);
+        return view('new.screen2', compact('arrival'));
     }
     /**
      * Check if Authenticated user is admin

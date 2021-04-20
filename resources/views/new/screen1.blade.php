@@ -39,13 +39,12 @@
 
         <p style="color: white; margin-top: 2rem; font-size: 2em;"> {{ date('l j F Y') }} </p>
 
-        <p style="color: white; margin-top: 2rem; font-size: 6em;"> {{ date('H\hi') }} </p>
+        <p style="color: white; margin-top: 2rem; font-size: 6em;"> {{ date('H:i') }} </p>
 
         <form method="POST" action="/step1_arrival" id="form1">
             @csrf
             <input type="hidden" name="arrival_date" value="{{ date('l j F Y') }}">
-            <input type="hidden" name="arrival_time" value="{{ date('H\hi') }}">
-
+            <input type="hidden" name="arrival_time" value="{{ date('H:i') }}">
         </form>
 
         <button type="submit" form="form1" style="background-color: inherit; padding: 0; border: none;"> <i
@@ -54,8 +53,6 @@
         {{-- <a href="/screen2"> <i class="fas fa-play-circle fa-10x" style="color: #23b24e;"></i> </a> --}}
 
     </div>
-
-
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
