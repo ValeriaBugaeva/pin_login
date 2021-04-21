@@ -13,9 +13,9 @@ $configData = Helper::applClasses();
     <link rel="stylesheet" href="{{ asset('css/base/pages/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/pages/page-login.css') }}">
 
-    <script src="{{ asset('js/core/collectedforms.js') }}"></script>
+    {{-- <script src="{{ asset('js/core/collectedforms.js') }}"></script>
     <script src="{{ asset('js/core/conversation-embed.js') }}"></script>
-    <script src="{{ asset('js/core/analytics.js') }}"></script>
+    <script src="{{ asset('js/core/analytics.js') }}"></script> --}}
 
 
     <style data-jss="" data-meta="MuiDialog">
@@ -548,6 +548,840 @@ $configData = Helper::applClasses();
         }
 
     </style>
+    <style data-jss="" data-meta="MuiButtonBase">
+        .MuiButtonBase-root {
+            color: inherit;
+            border: 0;
+            cursor: pointer;
+            margin: 0;
+            display: inline-flex;
+            outline: 0;
+            padding: 0;
+            position: relative;
+            align-items: center;
+            user-select: none;
+            border-radius: 0;
+            vertical-align: middle;
+            -moz-appearance: none;
+            justify-content: center;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .MuiButtonBase-root::-moz-focus-inner {
+            border-style: none;
+        }
+
+        .MuiButtonBase-root.Mui-disabled {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @media print {
+            .MuiButtonBase-root {
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+    </style>
+    <style data-jss="" data-meta="MuiSvgIcon">
+        .MuiSvgIcon-root {
+            fill: currentColor;
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            font-size: 1.5rem;
+            transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        .MuiSvgIcon-colorPrimary {
+            color: #7f56ac;
+        }
+
+        .MuiSvgIcon-colorSecondary {
+            color: #7f56ac;
+        }
+
+        .MuiSvgIcon-colorAction {
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+        .MuiSvgIcon-colorError {
+            color: #d0021b;
+        }
+
+        .MuiSvgIcon-colorDisabled {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .MuiSvgIcon-fontSizeInherit {
+            font-size: inherit;
+        }
+
+        .MuiSvgIcon-fontSizeSmall {
+            font-size: 1.25rem;
+        }
+
+        .MuiSvgIcon-fontSizeLarge {
+            font-size: 2.1875rem;
+        }
+
+    </style>
+    <style data-jss="" data-meta="MuiGrid">
+        .MuiGrid-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .MuiGrid-item {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .MuiGrid-zeroMinWidth {
+            min-width: 0;
+        }
+
+        .MuiGrid-direction-xs-column {
+            flex-direction: column;
+        }
+
+        .MuiGrid-direction-xs-column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .MuiGrid-direction-xs-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .MuiGrid-wrap-xs-nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .MuiGrid-wrap-xs-wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .MuiGrid-align-items-xs-center {
+            align-items: center;
+        }
+
+        .MuiGrid-align-items-xs-flex-start {
+            align-items: flex-start;
+        }
+
+        .MuiGrid-align-items-xs-flex-end {
+            align-items: flex-end;
+        }
+
+        .MuiGrid-align-items-xs-baseline {
+            align-items: baseline;
+        }
+
+        .MuiGrid-align-content-xs-center {
+            align-content: center;
+        }
+
+        .MuiGrid-align-content-xs-flex-start {
+            align-content: flex-start;
+        }
+
+        .MuiGrid-align-content-xs-flex-end {
+            align-content: flex-end;
+        }
+
+        .MuiGrid-align-content-xs-space-between {
+            align-content: space-between;
+        }
+
+        .MuiGrid-align-content-xs-space-around {
+            align-content: space-around;
+        }
+
+        .MuiGrid-justify-xs-center {
+            justify-content: center;
+        }
+
+        .MuiGrid-justify-xs-flex-end {
+            justify-content: flex-end;
+        }
+
+        .MuiGrid-justify-xs-space-between {
+            justify-content: space-between;
+        }
+
+        .MuiGrid-justify-xs-space-around {
+            justify-content: space-around;
+        }
+
+        .MuiGrid-justify-xs-space-evenly {
+            justify-content: space-evenly;
+        }
+
+        .MuiGrid-spacing-xs-1 {
+            width: calc(100% + 8px);
+            margin: -4px;
+        }
+
+        .MuiGrid-spacing-xs-1>.MuiGrid-item {
+            padding: 4px;
+        }
+
+        .MuiGrid-spacing-xs-2 {
+            width: calc(100% + 16px);
+            margin: -8px;
+        }
+
+        .MuiGrid-spacing-xs-2>.MuiGrid-item {
+            padding: 8px;
+        }
+
+        .MuiGrid-spacing-xs-3 {
+            width: calc(100% + 24px);
+            margin: -12px;
+        }
+
+        .MuiGrid-spacing-xs-3>.MuiGrid-item {
+            padding: 12px;
+        }
+
+        .MuiGrid-spacing-xs-4 {
+            width: calc(100% + 32px);
+            margin: -16px;
+        }
+
+        .MuiGrid-spacing-xs-4>.MuiGrid-item {
+            padding: 16px;
+        }
+
+        .MuiGrid-spacing-xs-5 {
+            width: calc(100% + 40px);
+            margin: -20px;
+        }
+
+        .MuiGrid-spacing-xs-5>.MuiGrid-item {
+            padding: 20px;
+        }
+
+        .MuiGrid-spacing-xs-6 {
+            width: calc(100% + 48px);
+            margin: -24px;
+        }
+
+        .MuiGrid-spacing-xs-6>.MuiGrid-item {
+            padding: 24px;
+        }
+
+        .MuiGrid-spacing-xs-7 {
+            width: calc(100% + 56px);
+            margin: -28px;
+        }
+
+        .MuiGrid-spacing-xs-7>.MuiGrid-item {
+            padding: 28px;
+        }
+
+        .MuiGrid-spacing-xs-8 {
+            width: calc(100% + 64px);
+            margin: -32px;
+        }
+
+        .MuiGrid-spacing-xs-8>.MuiGrid-item {
+            padding: 32px;
+        }
+
+        .MuiGrid-spacing-xs-9 {
+            width: calc(100% + 72px);
+            margin: -36px;
+        }
+
+        .MuiGrid-spacing-xs-9>.MuiGrid-item {
+            padding: 36px;
+        }
+
+        .MuiGrid-spacing-xs-10 {
+            width: calc(100% + 80px);
+            margin: -40px;
+        }
+
+        .MuiGrid-spacing-xs-10>.MuiGrid-item {
+            padding: 40px;
+        }
+
+        .MuiGrid-grid-xs-auto {
+            flex-grow: 0;
+            max-width: none;
+            flex-basis: auto;
+        }
+
+        .MuiGrid-grid-xs-true {
+            flex-grow: 1;
+            max-width: 100%;
+            flex-basis: 0;
+        }
+
+        .MuiGrid-grid-xs-1 {
+            flex-grow: 0;
+            max-width: 8.333333%;
+            flex-basis: 8.333333%;
+        }
+
+        .MuiGrid-grid-xs-2 {
+            flex-grow: 0;
+            max-width: 16.666667%;
+            flex-basis: 16.666667%;
+        }
+
+        .MuiGrid-grid-xs-3 {
+            flex-grow: 0;
+            max-width: 25%;
+            flex-basis: 25%;
+        }
+
+        .MuiGrid-grid-xs-4 {
+            flex-grow: 0;
+            max-width: 33.333333%;
+            flex-basis: 33.333333%;
+        }
+
+        .MuiGrid-grid-xs-5 {
+            flex-grow: 0;
+            max-width: 41.666667%;
+            flex-basis: 41.666667%;
+        }
+
+        .MuiGrid-grid-xs-6 {
+            flex-grow: 0;
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+
+        .MuiGrid-grid-xs-7 {
+            flex-grow: 0;
+            max-width: 58.333333%;
+            flex-basis: 58.333333%;
+        }
+
+        .MuiGrid-grid-xs-8 {
+            flex-grow: 0;
+            max-width: 66.666667%;
+            flex-basis: 66.666667%;
+        }
+
+        .MuiGrid-grid-xs-9 {
+            flex-grow: 0;
+            max-width: 75%;
+            flex-basis: 75%;
+        }
+
+        .MuiGrid-grid-xs-10 {
+            flex-grow: 0;
+            max-width: 83.333333%;
+            flex-basis: 83.333333%;
+        }
+
+        .MuiGrid-grid-xs-11 {
+            flex-grow: 0;
+            max-width: 91.666667%;
+            flex-basis: 91.666667%;
+        }
+
+        .MuiGrid-grid-xs-12 {
+            flex-grow: 0;
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+
+        @media (min-width:600px) {
+            .MuiGrid-grid-sm-auto {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .MuiGrid-grid-sm-true {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .MuiGrid-grid-sm-1 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .MuiGrid-grid-sm-2 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .MuiGrid-grid-sm-3 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .MuiGrid-grid-sm-4 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .MuiGrid-grid-sm-5 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .MuiGrid-grid-sm-6 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .MuiGrid-grid-sm-7 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .MuiGrid-grid-sm-8 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .MuiGrid-grid-sm-9 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .MuiGrid-grid-sm-10 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .MuiGrid-grid-sm-11 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .MuiGrid-grid-sm-12 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width:960px) {
+            .MuiGrid-grid-md-auto {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .MuiGrid-grid-md-true {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .MuiGrid-grid-md-1 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .MuiGrid-grid-md-2 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .MuiGrid-grid-md-3 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .MuiGrid-grid-md-4 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .MuiGrid-grid-md-5 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .MuiGrid-grid-md-6 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .MuiGrid-grid-md-7 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .MuiGrid-grid-md-8 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .MuiGrid-grid-md-9 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .MuiGrid-grid-md-10 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .MuiGrid-grid-md-11 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .MuiGrid-grid-md-12 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width:1280px) {
+            .MuiGrid-grid-lg-auto {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .MuiGrid-grid-lg-true {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .MuiGrid-grid-lg-1 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .MuiGrid-grid-lg-2 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .MuiGrid-grid-lg-3 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .MuiGrid-grid-lg-4 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .MuiGrid-grid-lg-5 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .MuiGrid-grid-lg-6 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .MuiGrid-grid-lg-7 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .MuiGrid-grid-lg-8 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .MuiGrid-grid-lg-9 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .MuiGrid-grid-lg-10 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .MuiGrid-grid-lg-11 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .MuiGrid-grid-lg-12 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width:1920px) {
+            .MuiGrid-grid-xl-auto {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .MuiGrid-grid-xl-true {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .MuiGrid-grid-xl-1 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .MuiGrid-grid-xl-2 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .MuiGrid-grid-xl-3 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .MuiGrid-grid-xl-4 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .MuiGrid-grid-xl-5 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .MuiGrid-grid-xl-6 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .MuiGrid-grid-xl-7 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .MuiGrid-grid-xl-8 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .MuiGrid-grid-xl-9 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .MuiGrid-grid-xl-10 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .MuiGrid-grid-xl-11 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .MuiGrid-grid-xl-12 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+    </style>
+    <style data-jss="" data-meta="MuiFab">
+        .MuiFab-root {
+            color: rgba(0, 0, 0, 0.87);
+            width: 56px;
+            height: 56px;
+            padding: 0;
+            font-size: 0.875rem;
+            min-width: 0;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            min-height: 36px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500;
+            line-height: 1.75;
+            border-radius: 50%;
+            letter-spacing: 0.02857em;
+            text-transform: uppercase;
+            background-color: #e0e0e0;
+        }
+
+        .MuiFab-root:active {
+            box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiFab-root:hover {
+            text-decoration: none;
+            background-color: #d5d5d5;
+        }
+
+        .MuiFab-root.Mui-focusVisible {
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiFab-root.Mui-disabled {
+            color: rgba(0, 0, 0, 0.26);
+            box-shadow: none;
+            background-color: rgba(0, 0, 0, 0.12);
+        }
+
+        @media (hover: none) {
+            .MuiFab-root:hover {
+                background-color: #e0e0e0;
+            }
+        }
+
+        .MuiFab-root:hover.Mui-disabled {
+            background-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiFab-label {
+            width: 100%;
+            display: inherit;
+            align-items: inherit;
+            justify-content: inherit;
+        }
+
+        .MuiFab-primary {
+            color: #fff;
+            background-color: #7f56ac;
+        }
+
+        .MuiFab-primary:hover {
+            background-color: rgb(88, 60, 120);
+        }
+
+        @media (hover: none) {
+            .MuiFab-primary:hover {
+                background-color: #7f56ac;
+            }
+        }
+
+        .MuiFab-secondary {
+            color: #fff;
+            background-color: #7f56ac;
+        }
+
+        .MuiFab-secondary:hover {
+            background-color: rgb(88, 60, 120);
+        }
+
+        @media (hover: none) {
+            .MuiFab-secondary:hover {
+                background-color: #7f56ac;
+            }
+        }
+
+        .MuiFab-extended {
+            width: auto;
+            height: 48px;
+            padding: 0 16px;
+            min-width: 48px;
+            min-height: auto;
+            border-radius: 24px;
+        }
+
+        .MuiFab-extended.MuiFab-sizeSmall {
+            width: auto;
+            height: 34px;
+            padding: 0 8px;
+            min-width: 34px;
+            border-radius: 17px;
+        }
+
+        .MuiFab-extended.MuiFab-sizeMedium {
+            width: auto;
+            height: 40px;
+            padding: 0 16px;
+            min-width: 40px;
+            border-radius: 20px;
+        }
+
+        .MuiFab-colorInherit {
+            color: inherit;
+        }
+
+        .MuiFab-sizeSmall {
+            width: 32px;
+            height: 32px;
+            min-height: 32px;
+        }
+
+        .MuiFab-sizeMedium {
+            width: 48px;
+            height: 48px;
+        }
+
+    </style>
+    <style data-jss="" data-meta="makeStyles">
+        .jss1 {
+            color: #a677d9;
+            background: #fff;
+        }
+
+        .jss1:hover {
+            background-color: #f5f6fd;
+        }
+
+    </style>
     <style type="text/css">
         html.hs-messages-widget-open.hs-messages-mobile,
         html.hs-messages-widget-open.hs-messages-mobile body {
@@ -614,189 +1448,118 @@ $configData = Helper::applClasses();
         }
 
     </style>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset("fontawesome/css/all.min.css") }}">
 @endsection
 
 @section('content')
-    {{-- <div class="auth-wrapper auth-v2">
-        <div class="auth-inner row m-0">
-            <!-- Brand logo-->
-            <a class="brand-logo" href="javascript:void(0);">
-                <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
-                    <defs>
-                        <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
-                            <stop stop-color="#000000" offset="0%"></stop>
-                            <stop stop-color="#FFFFFF" offset="100%"></stop>
-                        </lineargradient>
-                        <lineargradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%" x2="37.373316%" y2="100%">
-                            <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
-                            <stop stop-color="#FFFFFF" offset="100%"></stop>
-                        </lineargradient>
-                    </defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Artboard" transform="translate(-400.000000, -178.000000)">
-                            <g id="Group" transform="translate(400.000000, 178.000000)">
-                                <path class="text-primary" id="Path"
-                                    d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z"
-                                    style="fill: currentColor"></path>
-                                <path id="Path1"
-                                    d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z"
-                                    fill="url(#linearGradient-1)" opacity="0.2"></path>
-                                <polygon id="Path-2" fill="#000000" opacity="0.049999997"
-                                    points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"></polygon>
-                                <polygon id="Path-21" fill="#000000" opacity="0.099999994"
-                                    points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"></polygon>
-                                <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.099999994"
-                                    points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"></polygon>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
-                <h2 class="brand-text text-primary ml-1">Company</h2>
-            </a>
-            <!-- /Brand logo-->
-            <!-- Left Text-->
-            <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                <div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
-                    @if ($configData['theme'] === 'dark')
-                        <img class="img-fluid" src="{{ asset('images/pages/login-v2-dark.svg') }}" alt="Login V2" />
-                    @else
-                        <img class="img-fluid" src="{{ asset('images/pages/login-v2.svg') }}" alt="Login V2" />
-                    @endif
-                </div>
-            </div>
-            <!-- /Left Text-->
-            <!-- Login-->
-            <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                    <h4 class="card-title mb-1">Welcome to Company side! &#x1F44B;</h4>
-                    <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
-
-                    <form class="auth-login-form mt-2" method="POST" action="{{ route('login') }}">
-                        @csrf
-                        <div class="form-group">
-                            <label for="login-email" class="form-label">Email</label>
-
-                            <input type="text"
-                                class="form-control {{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}"
-                                id="login-email" name="login" placeholder="{{ __('app.username_or_email') }}"
-                                aria-describedby="login-email" tabindex="1" autofocus
-                                value="{{ old('username') ?: old('email') }}" />
-
-                            @if ($errors->has('username') || $errors->has('email'))
-                                <span class="invalid-feedback">
-                                    <strong>{{ $errors->first('username') ?: $errors->first('email') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-
-                        <div class="form-group">
-
-                            <div class="d-flex justify-content-between">
-                                <label for="login-password">Password</label>
-                                @if (Route::has('password.request'))
-                                    <a href="{{ url('/password/reset') }}">
-                                        <small>Forgot Password?</small>
-                                    </a>
-                                @endif
-                            </div>
-
-                            <div class="input-group input-group-merge form-password-toggle">
-                                <input type="password"
-                                    class="form-control form-control-merge {{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                    id="login-password" name="password" tabindex="2"
-                                    placeholder="{{ __('app.password') }}" aria-describedby="login-password" />
-                                <div class="input-group-append">
-                                    <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
-                                </div>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <div div class="custom-control custom-checkbox">
-                                <input class="custom-control-input" id="remember-me" type="checkbox" tabindex="3"
-                                    name="remember" value="{{ old('remember') }}" />
-                                <label class="custom-control-label" for="remember-me">
-                                    {{ __('app.remember_me') }}
-                                </label>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary btn-block" tabindex="4" type="submit">Sign in</button>
-                    </form>
-                    <p class="text-center mt-2">
-                        <span>New on our platform?</span>
-                        <a href="{{ url('/register') }}"><span>&nbsp;Create an account</span></a>
-                    </p>
-                    <div class="divider my-2">
-                        <div class="divider-text">or</div>
-                    </div>
-                    <div class="auth-footer-btn d-flex justify-content-center">
-                        <a class="btn btn-facebook" href="javascript:void(0)">
-                            <i data-feather="facebook"></i>
-                        </a>
-                        <a class="btn btn-twitter white" href="javascript:void(0)">
-                            <i data-feather="twitter"></i>
-                        </a>
-                        <a class="btn btn-google" href="javascript:void(0)">
-                            <i data-feather="mail"></i>
-                        </a>
-                        <a class="btn btn-github" href="javascript:void(0)">
-                            <i data-feather="github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /Login-->
-        </div>
-    </div> --}}
-
     <div id="roott">
-        <main class="base-layout-container">
-            <div class="login-container"><img alt="Voila logo" class="login-logo"
-                    src="{{ asset('images/pages/voila-logo.png') }}">
-                <h1 class="login-title">Online punch</h1>
-                <form class="login-form flex flex-column align-center" method="POST" action="{{ route('login') }}">
-                    @csrf
-                    <div class="w-100">
-                        <div class="MuiFormControl-root MuiTextField-root textField MuiFormControl-fullWidth"><label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
-                                data-shrink="false">Administrator account ID</label>
-                            <div
-                                class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl">
-                                <input aria-invalid="false" name="login" type="text"
-                                    class="MuiInputBase-input MuiFilledInput-input" value="">
+        <main class="auth-layout-container">
+            <section class="auth-layout-left">
+                <div class="layout-section top-section">
+                    <div class="clock-container"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                            </path>
+                            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
+                        </svg><span class="clock-time">20:39</span></div>
+                </div>
+                <div class="layout-section middle-section"><img alt="Logo company" class="group-logo"
+                        src="{{ asset('images/pages/group-logo.png') }}">
+                    <h1 class="group-name"></h1>
+                </div>
+                <div class="layout-section bottom-section"><img alt="Voila logo" class="voila-logo"
+                        src="{{ asset('images/pages/voila-logo.png') }}"><button class="btn btn-logout">Logout</button>
+                </div>
+            </section>
+            <section class="auth-layout-right" style="background-color: #e2e5f7;">
+                <div class="nip-container">
+                    <h1 class="nip-title">Enter your pin or your phone number</h1>
+                    <div class="nip-form">
+                        <div class="nip"></div>
+                        <form>
+                            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2">
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="1"><span class="MuiFab-label"
+                                            onClick="btnClick(1)">1</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="2" onClick="btnClick(2)"><span
+                                            class="MuiFab-label">2</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="3" onClick="btnClick(3)"><span
+                                            class="MuiFab-label">3</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="4" onClick="btnClick(4)"><span
+                                            class="MuiFab-label">4</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="5" onClick="btnClick(5)"><span
+                                            class="MuiFab-label">5</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="6" onClick="btnClick(6)"><span
+                                            class="MuiFab-label">6</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="7" onClick="btnClick(7)"><span
+                                            class="MuiFab-label">7</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="8" onClick="btnClick(8)"><span
+                                            class="MuiFab-label">8</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" name="9" onClick="btnClick(9)"><span
+                                            class="MuiFab-label">9</span></button>
+                                </div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" onClick="btnClick(-1)"><span class="MuiFab-label"><svg
+                                                class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <path
+                                                    d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z">
+                                                </path>
+                                            </svg></span></button></div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><button
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium"
+                                        tabindex="0" type="button" onClick="btnClick(0)"><span
+                                            class="MuiFab-label">0</span></button></div>
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" onClick="btnClick(100)"><button
+                                        id="btnEnter"
+                                        class="MuiButtonBase-root MuiFab-root jss1 number-button MuiFab-sizeMedium Mui-disabled"
+                                        tabindex="0" type="button" name="100" disabled=""><span class="MuiFab-label"><svg
+                                                class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                                            </svg></span></button></div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="w-100 mt-1">
-                        <div class="MuiFormControl-root MuiTextField-root textField MuiFormControl-fullWidth"><label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
-                                data-shrink="false">Password</label>
-                            <div
-                                class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl">
-                                <input aria-invalid="false" name="password" type="password"
-                                    class="MuiInputBase-input MuiFilledInput-input" value="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button-wrapper"><button class="btn btn-primary-light w-100" type="submit">Log in</button>
-                    </div>
-                </form><a class="btn btn-link btn-link-italic login-forgot-password"
-                    href="https://console.voila.app/#/password/forgot">Forgot password?</a>
-                <div class="flex align-center justify-center login-footer"><button type="button"
-                        class="btn btn-link">Français</button>|<a href="https://console.voila.app/"
-                        class="btn btn-link">access voilà</a></div>
-            </div>
+                </div>
+
+                <div style="position: absolute; right: 0; bottom: 0;" class="p-2">
+                     <i class="fas fa-comment-alt fa-3x" style="color: #33475b;"></i>
+                </div>
+
+               
+
+            </section>
         </main>
     </div>
-
 @endsection
 
 @section('vendor-script')
@@ -804,12 +1567,13 @@ $configData = Helper::applClasses();
 @endsection
 
 @section('page-script')
+    {{-- <script src="http://js.hs-scripts.com/4114376.js"></script> --}}
     <script src="{{ asset(mix('js/scripts/pages/page-auth-login.js')) }}"></script>
-    <script src="{{ asset('js/core/runtime.js') }}"></script>
-    <script src="{{ asset('js/core/polyfills.js') }}"></script>
-    <script src="{{ asset('js/core/scripts.js') }}"></script>
+    {{-- <script src="{{ asset('js/core/runtime.js') }}"></script> --}}
+    {{-- <script src="{{ asset('js/core/polyfills.js') }}"></script>
+    <script src="{{ asset('js/core/scripts.js') }}"></script> --}}
     {{-- <script src="{{ asset('js/core/main.js') }}"></script> --}}
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         ! function(b, e, f, g, a, c, d) {
             b.fbq || (a = b.fbq = function() {
                     a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
@@ -820,7 +1584,7 @@ $configData = Helper::applClasses();
         fbq("init", "242477749718108");
         fbq("track", "PageView");
 
-    </script>
+    </script> --}}
 
     {{-- <script type="text/javascript">
         var _hsp = window._hsp = window._hsp || [];
@@ -882,4 +1646,47 @@ $configData = Helper::applClasses();
         });
 
     </script> --}}
+
+    <script type="text/javascript">
+        function btnClick(number) {
+            sum = $('.nip').text();
+            if (number == -1) {
+                if (sum.length > 0) {
+                    sum = sum.substring(0, sum.length - 1);
+                }
+                $('.nip').text(sum);
+            } else if (number == 100) {
+                if (sum.length == 0) return;
+                $.ajax({
+                    type: 'POST',
+                    url: '/checkPIN',
+                    data: {
+                        pin: sum
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                    },
+                    success: function(data) {
+                        if (data == "ok") {
+                            window.location.href = "/showDashboard";
+                        } else {
+
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                    }
+                });
+            } else {
+                sum = sum + number;
+                $('.nip').text(sum);
+            }
+            if (sum.length > 0) {
+                $('#btnEnter').removeClass("Mui-disabled");
+            } else {
+                $('#btnEnter').addClass("Mui-disabled");
+            }
+        }
+
+    </script>
 @endsection
