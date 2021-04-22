@@ -1,12 +1,50 @@
-@php
-$configData = Helper::applClasses();
-@endphp
-@extends('layouts/fullLayoutMaster')
 
-@section('title', 'Login Page')
+<!DOCTYPE html>
 
-@section('page-style')
-    {{-- Page Css files --}}
+
+<html lang="en" data-textdirection="ltr" class="dark-layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="csrf-token" content="kDiSoPLV05DjKacmtSfdN465QEO16IsSSkwlVLbO">
+
+  <title>Login - Time Clock</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://167.99.250.153/images/logo/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="http://167.99.250.153/vendors/css/vendors.min.css" />
+<link rel="stylesheet" href="http://167.99.250.153/vendors/css/ui/prism.min.css" />
+
+    
+    <link rel="stylesheet" href="http://167.99.250.153/vendors/css/dialpad.css">
+
+
+<link rel="stylesheet" href="http://167.99.250.153/css/core.css" />
+
+
+
+
+<link rel="stylesheet" href="http://167.99.250.153/css/base/core/menu/menu-types/vertical-menu.css" />
+<!-- <link rel="stylesheet" href="http://167.99.250.153/css/base/core/colors/palette-gradient.css"> -->
+
+
+    
+    <!-- <link rel="stylesheet" href="http://167.99.250.153/vendors/css/dialpad.css"> -->
+    <!-- <script src="../../../time/dialpad.css"></script> -->
+
+
+<link rel="stylesheet" href="http://167.99.250.153/css/overrides.css" />
+
+
+
+
+
+<link rel="stylesheet" href="http://167.99.250.153/css/style.css" />
+<link rel="stylesheet" href="http://167.99.250.153/css/style-rtl.css" />
+
     <link rel="stylesheet" href="{{ asset(mix('css/base/plugins/forms/form-validation.css')) }}">
     <link rel="stylesheet" href="{{ asset(mix('css/base/pages/page-auth.css')) }}">
 
@@ -1449,33 +1487,87 @@ $configData = Helper::applClasses();
 
     </style>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset("fontawesome/css/all.min.css") }}">
-@endsection
+</head>
 
-@section('content')
-    <div id="roott">
-        <main class="auth-layout-container">
-            <section class="auth-layout-left">
-                <div class="layout-section top-section">
-                    <div class="clock-container"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <path
-                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
-                            </path>
-                            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
-                        </svg><span class="clock-time">20:39</span></div>
-                </div>
-                <div class="layout-section middle-section"><img alt="Logo company" class="group-logo"
-                        src="{{ asset('images/pages/group-logo.png') }}">
-                    <h1 class="group-name"></h1>
-                </div>
-                <div class="layout-section bottom-section"><img alt="Voila logo" class="voila-logo"
-                        src="{{ asset('images/pages/voila-logo.png') }}"><button class="btn btn-logout">Logout</button>
-                </div>
-            </section>
-            <section class="auth-layout-right" style="background-color: #e2e5f7;">
-                <div class="nip-container">
-                    <h1 class="nip-title">Enter your pin or your phone number</h1>
+
+
+
+
+<body class="vertical-layout vertical-menu-modern 1-column
+ 
+navbar-floating
+menu-expanded footer-static" data-menu="vertical-menu-modern" data-col="1-column" data-layout="dark-layout" style="" data-framework="laravel" data-asset-path="http://167.99.250.153/">
+
+  
+  
+  
+  <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow ">
+    
+    <div class="navbar-container d-flex content">
+      <div class="bookmark-wrapper d-flex align-items-center">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-link-style">
+            <div class="msg-date">22/04/2021 - 11:18</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="nav navbar-nav align-items-center ml-auto">
+        <li class="nav-item dropdown dropdown-language">
+          <a class="nav-link dropdown-toggle" id="dropdown-flag" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="flag-icon flag-icon-us"></i>
+            <span class="selected-language">English</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag">
+            <a class="dropdown-item" href="http://167.99.250.153/lang/en" data-language="en">
+              <i class="flag-icon flag-icon-us"></i> English
+            </a>
+            <a class="dropdown-item" href="http://167.99.250.153/lang/fr" data-language="fr">
+              <i class="flag-icon flag-icon-fr"></i> French
+            </a>
+            <a class="dropdown-item" href="http://167.99.250.153/lang/de" data-language="de">
+              <i class="flag-icon flag-icon-de"></i> German
+            </a>
+            <a class="dropdown-item" href="http://167.99.250.153/lang/pt" data-language="pt">
+              <i class="flag-icon flag-icon-pt"></i> Portuguese
+            </a>
+          </div>
+        </li>
+      
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <!-- END: Header-->
+
+  <!-- BEGIN: Content-->
+  <div class="app-content content ">
+    <!-- BEGIN: Header-->
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+
+        <div class="content-wrapper ">
+      
+            <div class="content-header row">
+  <div class="content-header-left col-md-9 col-12 mb-2">
+    <div class="row breadcrumbs-top">
+      <div class="col-12">
+        <h2 class="content-header-title float-left mb-0">Login</h2>
+        <div class="breadcrumb-wrapper">
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <div class="content-body">
+        
+        <div class="nip-container">
+                    <h1 class="nip-title" style="color: white;">Enter your pin or your phone number</h1>
                     <div class="nip-form">
                         <div class="nip"></div>
                         <form>
@@ -1550,143 +1642,53 @@ $configData = Helper::applClasses();
                         </form>
                     </div>
                 </div>
-
-                <div style="position: absolute; right: 0; bottom: 0;" class="p-2">
-                     <i class="fas fa-comment-alt fa-3x" style="color: #33475b;"></i>
-                </div>
-
-               
-
-            </section>
-        </main>
+      </div>
     </div>
-@endsection
+    
+  </div>
+  <!-- End: Content-->
 
-@section('vendor-script')
-    <script src="{{ asset(mix('vendors/js/forms/validation/jquery.validate.min.js')) }}"></script>
-@endsection
+  <div class="sidenav-overlay"></div>
+  <div class="drag-target"></div>
 
-@section('page-script')
-    {{-- <script src="http://js.hs-scripts.com/4114376.js"></script> --}}
-    <script src="{{ asset(mix('js/scripts/pages/page-auth-login.js')) }}"></script>
-    {{-- <script src="{{ asset('js/core/runtime.js') }}"></script> --}}
-    {{-- <script src="{{ asset('js/core/polyfills.js') }}"></script>
-    <script src="{{ asset('js/core/scripts.js') }}"></script> --}}
-    {{-- <script src="{{ asset('js/core/main.js') }}"></script> --}}
-    {{-- <script type="text/javascript">
-        ! function(b, e, f, g, a, c, d) {
-            b.fbq || (a = b.fbq = function() {
-                    a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
-                }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e
-                .createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(
-                    c, d))
-        }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-        fbq("init", "242477749718108");
-        fbq("track", "PageView");
+  
+  <!-- BEGIN: Footer-->
+<footer class="footer  footer-light">
+  <p class="clearfix mb-0">
+    <span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; <script>document.write(new Date().getFullYear())</script><a class="ml-25" href="https://solutionweb.io" target="_blank">SolutionWeb.io</a>
+      <span class="d-none d-sm-inline-block">, All rights Reserved</span>
+    </span>
+    <span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span>
+  </p>
+</footer>
+<button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+<!-- END: Footer-->
 
-    </script> --}}
+  
+  <script src="http://167.99.250.153/vendors/js/vendors.min.js"></script>
+<script src="http://167.99.250.153/vendors/js/ui/prism.min.js"></script>
+    
+    <!-- <script src="../../../time/dialpad.js"></script> -->
 
-    {{-- <script type="text/javascript">
-        var _hsp = window._hsp = window._hsp || [];
-        _hsp.push(['addEnabledFeatureGates', []]);
-        ! function(t, e, r) {
-            if (!document.getElementById(t)) {
-                var n = document.createElement("script");
-                for (var a in n.src = "https://js.hs-banner.com/4114376.js", n.type = "text/javascript", n.id = t, r) r
-                    .hasOwnProperty(a) && n.setAttribute(a, r[a]);
-                var i = document.getElementsByTagName("script")[0];
-                i.parentNode.insertBefore(n, i)
-            }
-        }("cookieBanner-4114376", 0, {
-            "data-cookieconsent": "ignore",
-            "data-loader": "hs-scriptloader",
-            "data-hsjs-portal": 4114376,
-            "data-hsjs-env": "prod",
-            "data-hsjs-hublet": "na1"
+<script src="http://167.99.250.153/js/core/app-menu.js"></script>
+<script src="http://167.99.250.153/js/core/app.js"></script>
+<script src="http://167.99.250.153/js/scripts/customizer.js"></script>
+
+    
+    <script src="../../../js/dialpad.js"></script>
+
+
+  <script type="text/javascript">
+    $(window).on('load', function() {
+      if (feather) {
+        feather.replace({
+          width: 14
+          , height: 14
         });
-        ! function(e, t) {
-            if (!document.getElementById(e)) {
-                var c = document.createElement("script");
-                c.src = "https://js.hs-analytics.net/analytics/1618622400000/4114376.js", c.type = "text/javascript", c.id =
-                    e;
-                var n = document.getElementsByTagName("script")[0];
-                n.parentNode.insertBefore(c, n)
-            }
-        }("hs-analytics");
-        ! function(t, e, r) {
-            if (!document.getElementById(t)) {
-                var n = document.createElement("script");
-                for (var a in n.src = "https://js.usemessages.com/conversations-embed.js", n.type = "text/javascript", n
-                        .id = t, r) r.hasOwnProperty(a) && n.setAttribute(a, r[a]);
-                var i = document.getElementsByTagName("script")[0];
-                i.parentNode.insertBefore(n, i)
-            }
-        }("hubspot-messages-loader", 0, {
-            "data-loader": "hs-scriptloader",
-            "data-hsjs-portal": 4114376,
-            "data-hsjs-env": "prod",
-            "data-hsjs-hublet": "na1"
-        });
-        ! function(t, e, r) {
-            if (!document.getElementById(t)) {
-                var n = document.createElement("script");
-                for (var a in n.src = "https://js.hscollectedforms.net/collectedforms.js", n.type = "text/javascript", n
-                        .id = t, r) r.hasOwnProperty(a) && n.setAttribute(a, r[a]);
-                var i = document.getElementsByTagName("script")[0];
-                i.parentNode.insertBefore(n, i)
-            }
-        }("CollectedForms-4114376", 0, {
-            "crossorigin": "anonymous",
-            "data-leadin-portal-id": 4114376,
-            "data-leadin-env": "prod",
-            "data-loader": "hs-scriptloader",
-            "data-hsjs-portal": 4114376,
-            "data-hsjs-env": "prod",
-            "data-hsjs-hublet": "na1"
-        });
+      }
+    })
 
-    </script> --}}
+  </script>
+</body>
 
-    <script type="text/javascript">
-        function btnClick(number) {
-            sum = $('.nip').text();
-            if (number == -1) {
-                if (sum.length > 0) {
-                    sum = sum.substring(0, sum.length - 1);
-                }
-                $('.nip').text(sum);
-            } else if (number == 100) {
-                if (sum.length == 0) return;
-                $.ajax({
-                    type: 'POST',
-                    url: '/checkPIN',
-                    data: {
-                        pin: sum
-                    },
-                    headers: {
-                        'X-CSRF-TOKEN': "{{ csrf_token() }}"
-                    },
-                    success: function(data) {
-                        if (data == "ok") {
-                            window.location.href = "/showDashboard";
-                        } else {
-
-                        }
-                    },
-                    error: function(err) {
-                        console.log(err);
-                    }
-                });
-            } else {
-                sum = sum + number;
-                $('.nip').text(sum);
-            }
-            if (sum.length > 0) {
-                $('#btnEnter').removeClass("Mui-disabled");
-            } else {
-                $('#btnEnter').addClass("Mui-disabled");
-            }
-        }
-
-    </script>
-@endsection
+</html>
