@@ -40,6 +40,14 @@ Route::get('/current', function () {
     return view('new.current');
 });
 
+Route::get('/departure', function () {
+    return view('new.departure');
+});
+
+Route::get('/break', function () {
+    return view('new.break');
+});
+
 
 
 //end of new routes
