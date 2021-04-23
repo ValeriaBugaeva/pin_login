@@ -28,6 +28,28 @@ Route::get('/screen4', '\App\Http\Controllers\Dashboard\DashboardController@scre
 
 Route::post('/step1_arrival', '\App\Http\Controllers\Dashboard\DashboardController@step2');
 
+Route::get('/start', function () {
+    return view('new.start');
+});
+
+Route::get('/arrive', function () {
+    return view('new.arrive');
+});
+
+Route::get('/current', function () {
+    return view('new.current');
+});
+
+Route::get('/departure', function () {
+    return view('new.departure');
+});
+
+Route::get('/break', function () {
+    return view('new.break');
+});
+
+
+
 //end of new routes
 
 // Autre calendar

@@ -319,7 +319,7 @@ $configData = Helper::applClasses();
         }
 
         .MuiFilledInput-root.Mui-disabled {
-            background-color: rgba(100, 100, 100, 0.12);
+            background-color: rgba(0, 0, 0, 0.12);
         }
 
         @media (hover: none) {
@@ -577,7 +577,6 @@ $configData = Helper::applClasses();
         .MuiButtonBase-root.Mui-disabled {
             cursor: default;
             pointer-events: none;
-            color: #a9a9a9;
         }
 
         @media print {
@@ -1281,7 +1280,7 @@ $configData = Helper::applClasses();
         .MuiFab-root.Mui-disabled {
             color: rgba(0, 0, 0, 0.26);
             box-shadow: none;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.12);
         }
 
         @media (hover: none) {
@@ -1449,12 +1448,14 @@ $configData = Helper::applClasses();
         }
 
     </style>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset("fontawesome/css/all.min.css") }}">
 @endsection
 
 @section('content')
     <div id="roott">
         <main class="auth-layout-container">
-            {{-- <section class="auth-layout-left">
+            <section class="auth-layout-left">
                 <div class="layout-section top-section">
                     <div class="clock-container"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
                             aria-hidden="true">
@@ -1471,10 +1472,10 @@ $configData = Helper::applClasses();
                 <div class="layout-section bottom-section"><img alt="Voila logo" class="voila-logo"
                         src="{{ asset('images/pages/voila-logo.png') }}"><button class="btn btn-logout">Logout</button>
                 </div>
-            </section> --}}
-            <section class="auth-layout-right">
+            </section>
+            <section class="auth-layout-right" style="background-color: #e2e5f7;">
                 <div class="nip-container">
-                    <h1 class="nip-title" style="color: #e2e5f7">Enter your pin or your phone number</h1>
+                    <h1 class="nip-title">Enter your pin or your phone number</h1>
                     <div class="nip-form">
                         <div class="nip"></div>
                         <form>
@@ -1549,6 +1550,13 @@ $configData = Helper::applClasses();
                         </form>
                     </div>
                 </div>
+
+                <div style="position: absolute; right: 20px; bottom: 20px;">
+                     <i class="fas fa-comment-alt fa-3x" style="color: #33475b;"></i>
+                </div>
+
+               
+
             </section>
         </main>
     </div>
@@ -1660,9 +1668,7 @@ $configData = Helper::applClasses();
                     },
                     success: function(data) {
                         if (data == "ok") {
-                            // window.location.href = "/showDashboard";
-                            window.location.href = "/screen1";
-
+                            window.location.href = "/showDashboard";
                         } else {
 
                         }
